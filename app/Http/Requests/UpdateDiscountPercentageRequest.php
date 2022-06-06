@@ -25,7 +25,7 @@ class UpdateDiscountPercentageRequest extends FormRequest
     {
         return [
             'currencyId' => 'required|integer',
-            'discountPercentage' => 'required|numeric'
+            'discountPercentage' => 'required|numeric|max:99'
         ];
     }
 }

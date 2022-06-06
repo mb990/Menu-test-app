@@ -34,7 +34,7 @@
         <div class="col-lg-6">
 
             <label class="lead" for="discount_percentage">Discount Percentage</label><br>
-            <input class="form-control js-discount-percentage" type="number" id="discount_percentage" name="discount_percentage" value="">
+            <input class="form-control js-discount-percentage" type="number" id="discount_percentage" name="discount_percentage" value="" max=99>
 
         </div>
 
@@ -81,13 +81,13 @@
             $('.js-update-discount-percentage').click(function () {
                 let currencyId = $('.js-currency-id').val();
                 let discountPercentage = $('.js-discount-percentage').val();
-                if (currencyId && discountPercentage) {
+                if (currencyId && discountPercentage && discountPercentage < 100) {
                     if (confirm('Are you sure you want to update the discount percentage?')) {
                         updateCurrencyDiscountPercentage(updateCurrencyDiscountUrl, currencyId, discountPercentage);
                     }
                 }
                 else {
-                    alert('Please select a currency and enter discount percentage')
+                    alert('Please select a currency and enter a proper discount percentage')
                 }
             })
 
