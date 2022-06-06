@@ -1,64 +1,38 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# MENU TEST APP
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a Exchange Rate Test App
 
-## About Laravel
+## Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+To install and run the project locally, please do the following:
+- Step 1: Clone the project running the command: `git clone git@github.com:mb990/Menu-test-app.git`
+- Step 2: Run your local php server environment
+- Step 3: Run `composer install`
+- Step 4: Run `npm install`
+- Step 5: Run `npm run dev`
+- Step 6: Run `php artisan key:generate`
+- Step 7: Create a database with the name of your choice
+- Step 8: Copy the content of the `.env.example` file from the root of the project to a newly created file named `.env` and save it in the root of the project as well
+- Step 9: Edit the .env file with the following changes:
+    - `DB_DATABASE=name_of_your_created_database`
+    - `DB_USERNAME=your_username`
+    - `DB_PASSWORD=your_password`
+    - `QUEUE_CONNECTION='database'` - we will be using database connection in this case
+        - PLEASE SET YOUR MAILTRAP CONFIGURATION IN THE `.env` FILE, AS IT IS THE TEST SERVER WE WILL BE USING, INCLUDING THE FOLLOWING VARIABLES:
+        - `MAIL_MAILER`
+        - `MAIL_HOST`
+        - `MAIL_PORT`
+        - `MAIL_USERNAME`
+        - `MAIL_PASSWORD`
+        - `MAIL_ENCRYPTION`
+    - `MAIL_FROM_ADDRESS="menu-test@example.com"`
+    - `MAIL_TO_ADDRESS='your-address-of-choice@example.com'` NOTE: email will appear in Mailtrap inbox, this address will only be visible in a `To` header. Variable value must be a valid email, otherwise it won't be sent
+    - `EXCHANGE_RATE_API_BASE_URL="https://api.apilayer.com/currency_data/live"`
+    - `EXCHANGE_RATE_API_KEY="hBGu8TGps8CAbfYTfW2LKqzAGQkT9J2t"`
+- Step 10: Run `php artisan optimize`
+- Step 11: Run `php artisan config:clear`
+- Step 12: Run `php artisan cache:clear`
+- Step 13: Run `php artisan migrate --seed`
+- Step 14: In order to use queues run `php artisan queue:work` in a separate terminal tab. NOTE: the tab must stay opened
+- Step 15: Navigate to `http://localhost:your-chosen-port/` to use the app.
+- Step 16: To change discount % for any currency stored in the database or to update exchange rates, go to the `/config` page.
