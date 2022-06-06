@@ -7,12 +7,12 @@ This is a Exchange Rate Test App
 To install and run the project locally, please do the following:
 - Step 1: Clone the project running the command: `git clone https://github.com/mb990/Menu-test-app.git`
 - Step 2: Run your local php server environment
-- Step 3: Run `composer install`
-- Step 4: Run `npm install`
-- Step 5: Run `npm run dev`
-- Step 6: Run `php artisan key:generate`
-- Step 7: Create a database with the name of your choice
-- Step 8: Copy the content of the `.env.example` file from the root of the project to a newly created file named `.env` and save it in the root of the project as well
+- Step 3: Copy the content of the `.env.example` file from the root of the project to a newly created file named `.env` and save it in the root of the project as well
+- Step 4: Run `composer install`
+- Step 5: Run `npm install`
+- Step 6: Run `npm run dev`
+- Step 7: Run `php artisan key:generate`
+- Step 8: Create a database with the name of your choice
 - Step 9: Edit the .env file with the following changes:
     - `DB_DATABASE=name_of_your_created_database`
     - `DB_USERNAME=your_username`
