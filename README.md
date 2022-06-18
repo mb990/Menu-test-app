@@ -5,7 +5,7 @@ This is a Exchange Rate Test App
 ## Installation
 
 To install and run the project locally, please do the following:
-- Step 1: Clone the project running the command: `git clone https://github.com/mb990/Menu-test-app.git`
+- Step 1: Clone the project running the command: `git clone https://github.com/mb990/exchange-rate-app.git`
 - Step 2: Run your local php server environment
 - Step 3: Copy the content of the `.env.example` file from the root of the project to a newly created file named `.env` and save it in the root of the project as well
 - Step 4: Run `composer install`
