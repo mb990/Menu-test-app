@@ -1,4 +1,4 @@
-# MENU TEST APP
+# EXCHANGE RATE APP
 
 This is a Exchange Rate Test App
 
